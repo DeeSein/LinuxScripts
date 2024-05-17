@@ -1,20 +1,23 @@
 #!/bin/bash
-# Tast6 is for creating new files in a loop.
+# Task6 is for creating new files in a loop.
 
+counter=1
 while true
 do
-    echo "Do you want to create a new file?"
+    echo "Do you want to create a file? (type: yes or no)"
     read answer
     file="file$counter"
-    if [ "$answer" = "yes" ]; then
+    if [ "$answer" = "yes" ]; 
+    then
         touch "$file.txt"
         echo "Created $file.txt"
         counter=$((counter+1))
-        echo "Do you want to create another file?"
-        read answer
-        if [ "$answer" = "no" ]; then
-            echo "Done creating $counter files"
-                break
         fi
-        echo "Do you want to create aother file?"
+        if [ "$answer" = "no" ]; 
+        then
+            echo "Done creating $counter files"
+            break
+            
+        fi
 done
+
