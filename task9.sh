@@ -15,4 +15,3 @@ if [ -d "$PATH" ]; then
     echo "Directory owner: $directory_owner"
     
 fi
-
